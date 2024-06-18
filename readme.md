@@ -55,3 +55,33 @@ SELECT * FROM A FULL OUTER JOIN B ON A.key = B.key
 SELECT * FROM A FULL OUTER JOIN B ON A.key = B.key WHERE A.key IS NULL OR B.key is NULL 
 ```
 <hr/>
+
+## Rollback Retrieve All Deleted Data
+
+```sql
+DELETE from Customer where State = 'Texas';
+ROLLBACK;
+```
+## Modify Columns 
+
+```sql
+ALTER TABLE new_db.organization MODIFY COLUMN stripe_id VARCHAR(255);
+```
+## ADD Column
+
+```sql
+ALTER TABLE table_name
+ADD column_name datatype;
+```
+
+## Create Table
+
+```sql
+CREATE TABLE Users
+(
+   UserID int,
+   FirstName varchar(100), 
+   LastName varchar(100),
+   City varchar(100)
+);
+```
