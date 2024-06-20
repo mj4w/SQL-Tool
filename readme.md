@@ -1,60 +1,35 @@
-# SQL_GUIDE -mj4w
+# SQL_GUIDE 
 
-## SQL JOINS
+### written by: Marcel James
 
-<b>INNER JOIN</b> 
-- Retrieves records with matching values in both tables
-```sql 
-   SELECT * FROM A INNER JOIN B ON A.key = B.key
-```
-<hr/>  
-<b>LEFT JOIN</b>
-- Retrieves all records from the left table and matching records from the right table
 
-```sql
-SELECT * FROM A LEFT JOIN B ON A.key = B.key
-```
+- "A <b>database</b> is an organized collection of structured information or data, typically stored electronically in a computer system. <em>-Oracle Website</em>"
 
-<hr/>
-<b>LEFT JOIN with NULL Check</b>
-- Filters only the records where there is no match in the right table (NULL values)
+- "<b>Database Management System</b> A software application that helps store, load and update data in the database."
 
-```sql
-SELECT * FROM A LEFT JOIN B ON A.key = B.key WHERE B.key IS NULL 
-```
-<hr/>
+- "An <b>entity</b> is single unique object in the real world that is being mastered. <em>Examples of an entity are a single person, single product, or single organization</em> -IBM Website"
 
-<b>RIGHT JOIN</b>
-- Retrieves all records from the right table and matching records 
+## Entities 
 
-```sql
-SELECT * FROM A RIGHT JOIN B ON A.key = B.key 
-```
-<hr/>
+- <b>One-to-One</b> One entity directly relates to only other entity
+- <b>One-to-Many</b> One entity has a relationship with one or more entities
+- <b>Many-to-Many</b> More than one entity has a relationship with one or more other entities
 
-<b>RIGHT JOIN with NULL Check</b>
-- Filters only the records where there is no match in the left table (NULL VALUES)
+## Entity-Relationship Diagram (ERD)
+- An entity-relationship model, also called an entity-relationship diagram (ERD), is a graphical representation of entities and their relationships to each other.
+<b>Contains //</b>
+#### Primary Key
+- Must be unique for each record
+- Cannot contain null values
+- Can be a composite of multiple fields
+### Referential Integrity
+- Each foreign key is a reference to a primary key
+- Keeps tables in the relationship with each other
 
-```sql
-SELECT * FROM A RIGHT JOIN B ON A.key = B.key WHERE A.key IS NULL 
-```
-<hr/>
+## Basic Syntax
+- <b>SELECT</b> field_name
+- <b>FROM</b> table-name
 
-<b>FULL JOIN</b>
-- Retrieves all records when there is a match in either the left or right table
-
-```sql
-SELECT * FROM A FULL OUTER JOIN B ON A.key = B.key  
-```
-<hr/>
-
-<b>FULL JOIN with NULL Check</b>
-- Filters only the records where there is no match in either the left or right table ( NULL Values in either))
-
-```sql
-SELECT * FROM A FULL OUTER JOIN B ON A.key = B.key WHERE A.key IS NULL OR B.key is NULL 
-```
-<hr/>
 
 ## Rollback Retrieve All Deleted Data
 
