@@ -5,6 +5,25 @@
 ```sql 
    SELECT * FROM A INNER JOIN B ON A.key = B.key
 ```
+### Example
+```sql
+   SELECT LastName, OrderId 
+   FROM Customer 
+   JOIN Orders on Customer.CustomerID = Orders.CustomerID;
+```
+
+```sql
+SELECT Customer.CustomerID,
+    FirstName,
+    LastName,
+    TotalDue,
+FROM Customer
+    JOIN Orders on
+    Customer.CustomerID = Orders.CustomerID
+GROUP BY Customer.CustomerID,
+    FirstName,
+    LastName
+```
 <hr/>  
 <b>LEFT JOIN</b>
 - Retrieves all records from the left table and matching records from the right table

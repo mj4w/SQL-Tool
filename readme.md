@@ -30,6 +30,53 @@
 - <b>SELECT</b> field_name
 - <b>FROM</b> table-name
 
+## Clauses
+- "A <b>Join</b> clause is used to combine rows from tow or more tables, based on a related column between them. <em>-W3Schools website</em>"
+### Additional
+- WHERE
+- ORDER BY 
+- GROUP BY
+- HAVING
+- LIMIT
+
+## NULL Value
+- Represents an empty value or cell
+- Assigned at creation of the record
+- Programmatically assigned null
+- Not the same as a zero value
+- Not the same as a blank or space
+
+## WHERE Clause 
+- Filters data to a specific subset of information
+
+## WHERE Clause and LIKE
+
+```sql
+SELECT field_name
+FROM table-name
+WHERE filename LIKE '%characters%'
+```
+## Text Searches USING LIKE
+
+- Enclose in single quotes: <b>'%mary%'</b>
+- Searches are not case-sensitive
+
+## IS NULL and IS NOT NULL
+
+
+```sql
+SELECT field_name
+FROM table-name
+WHERE filename IS NULL
+```
+
+
+```sql
+SELECT field_name
+FROM table-name
+WHERE filename IS NOT NULL
+```
+
 
 ## Rollback Retrieve All Deleted Data
 
@@ -60,3 +107,4 @@ CREATE TABLE Users
    City varchar(100)
 );
 ```
+https://potential-memory-6qrg9qxg4gw3rvrr.github.dev/
